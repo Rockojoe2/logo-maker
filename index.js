@@ -43,21 +43,21 @@ inquirer
     {
         svgCreated =`<svg width="300" height="200">
         <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="${shapeColor}" />
-        <text x="20" y="55" fill="${textColor}" font-size="14">${text}</text>
+        <text x="35" y="55" fill="${textColor}" font-size="14">${text}</text>
         </svg>`;
     }
     else if(shape == "triangle")
     {
         svgCreated = `<svg width="300" height="200">
         <polygon points="50,5 90,90 10,90" fill="${shapeColor}" />
-        <text x="20" y="55" fill="${textColor}" font-size="14">${text}</text>
+        <text x="35" y="65" fill="${textColor}" font-size="14">${text}</text>
         </svg>`;
     }
     else if(shape == "square")
     {
         svgCreated = `<svg width="300" height="200">
         <rect x="10" y="10" width="80" height="80" fill="${shapeColor}" />
-        <text x="20" y="55" fill="${textColor}" font-size="14">${text}</text>
+        <text x="35" y="55" fill="${textColor}" font-size="14">${text}</text>
         </svg>`;
     }
 
