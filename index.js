@@ -1,12 +1,22 @@
 const inquirer = require("inquirer");
 const fs = require("fs"); //Needed to perform file operations such as making a readme
 
+const isTextTooLong = function(userInput)
+{
+  if(userInput.length > 3)
+  {
+    return "Please make your input 3 characters or less";
+  }
+  return true;
+}
+
 inquirer
   .prompt([
     {
       type: 'input',
       message: 'Please enter text up to three characters!',
       name: 'text',
+      validate: isTextTooLong,
     },
     {
       type: 'input',
@@ -41,29 +51,81 @@ inquirer
 
     if(shape == "circle")
     {
-        svgCreated =`<svg width="300" height="200">
+        // svgCreated = `<svg width="300" height="200">
+        // <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="${shapeColor}" />
+        // <text x="35" y="55" fill="${textColor}" font-size="14">${text}</text>
+        // </svg>`;
+
+        svgCreated = `<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+        
+        <svg width="300" height="200">
         <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="${shapeColor}" />
         <text x="35" y="55" fill="${textColor}" font-size="14">${text}</text>
-        </svg>`;
+        </svg>
+            
+        </body>
+        </html>`
+        
     }
     else if(shape == "triangle")
     {
-        svgCreated = `<svg width="300" height="200">
+        // svgCreated = `<svg width="300" height="200">
+        // <polygon points="50,5 90,90 10,90" fill="${shapeColor}" />
+        // <text x="35" y="65" fill="${textColor}" font-size="14">${text}</text>
+        // </svg>`;
+
+        svgCreated = `<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+        
+        <svg width="300" height="200">
         <polygon points="50,5 90,90 10,90" fill="${shapeColor}" />
         <text x="35" y="65" fill="${textColor}" font-size="14">${text}</text>
-        </svg>`;
+        </svg>
+            
+        </body>
+        </html>`
     }
     else if(shape == "square")
     {
-        svgCreated = `<svg width="300" height="200">
+        // svgCreated = `<svg width="300" height="200">
+        // <rect x="10" y="10" width="80" height="80" fill="${shapeColor}" />
+        // <text x="35" y="55" fill="${textColor}" font-size="14">${text}</text>
+        // </svg>`;
+
+        svgCreated = `<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+        
+        <svg width="300" height="200">
         <rect x="10" y="10" width="80" height="80" fill="${shapeColor}" />
         <text x="35" y="55" fill="${textColor}" font-size="14">${text}</text>
-        </svg>`;
+        </svg>
+            
+        </body>
+        </html>`
     }
 
 
-    fs.writeFile('logo.svg', svgCreated, (err) =>
-    err ? console.error(err) : console.log('Generated logo.svg!')
+    fs.writeFile('index.html', svgCreated, (err) =>
+    err ? console.error(err) : console.log('Generated logo.svg inside index.html!')
     );
 
   }
