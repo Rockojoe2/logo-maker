@@ -1,5 +1,7 @@
 const Shape = require('../node.js');
 
+
+//Error tests to make sure the logic works.
 describe("Shape", () => {
     describe("Character Length", () => {
         it("It should throw an error when the character length provided is over 3 characters long", () => {

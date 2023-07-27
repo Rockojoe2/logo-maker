@@ -1,5 +1,7 @@
 class Shape{}
 
+
+//The logic for the error tests
 Shape.prototype.isLongEnough = (userResponse) => {
     if(userResponse.length < 3)
     {
@@ -11,6 +13,7 @@ Shape.prototype.isLongEnough = (userResponse) => {
     }
 }
 
+//Text color and shape color can share the same one
 Shape.prototype.isColor = (userResponse) => {
     const colorNames = [
     "red", "blue", "green", "yellow", "orange", "purple", "pink", "black",

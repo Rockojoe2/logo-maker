@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs"); //Needed to perform file operations such as making a readme
 
+//Created a function to check if userInput is longer than three characters. Won't continue on unless true.
 const isTextTooLong = function(userInput)
 {
   if(userInput.length > 3)
@@ -49,6 +50,7 @@ inquirer
     const shapeColor = response.shapeColor;
     let svgCreated = "";
 
+    //If the shape is a circle, svgCreated will be a string that creates an index.html with the svg's of a circle inside of it.
     if(shape == "circle")
     {
         // svgCreated = `<svg width="300" height="200">
@@ -74,6 +76,8 @@ inquirer
         </html>`
         
     }
+
+     //If the shape is a triangle, svgCreated will be a string that creates an index.html with the svg's of a triangle inside of it.
     else if(shape == "triangle")
     {
         // svgCreated = `<svg width="300" height="200">
@@ -98,6 +102,8 @@ inquirer
         </body>
         </html>`
     }
+
+     //If the shape is a square, svgCreated will be a string that creates an index.html with the svg's of a square inside of it.
     else if(shape == "square")
     {
         // svgCreated = `<svg width="300" height="200">
