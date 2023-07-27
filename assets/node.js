@@ -5,11 +5,11 @@ class Shape{}
 Shape.prototype.isLongEnough = (userResponse) => {
     if(userResponse.length < 3)
     {
-        return false;
+        return true;
     }
     else
     {
-        return true;
+        return false;
     }
 }
 
