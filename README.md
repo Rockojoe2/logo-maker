@@ -16,6 +16,8 @@ With this the logo is generated in an index.html and you are able to see your lo
 <img src="./assets/images/image.jpg"/>
 <img src="./assets/images/image2.jpg"/>
 
+https://drive.google.com/file/d/12i7Mc2d8xMg2WZ4f3Sj3TLZT3SCQbP1K/view
+
 
 ## Installation
 

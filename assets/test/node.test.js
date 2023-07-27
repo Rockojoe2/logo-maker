@@ -6,7 +6,7 @@ describe("Shape", () => {
     describe("Character Length", () => {
         it("It should throw an error when the character length provided is over 3 characters long", () => {
             const shape = new Shape();
-            const result = shape.isLongEnough("SG");
+            const result = shape.isLongEnough("SWES");
             expect(result).toEqual(false);
         })
     })
@@ -14,7 +14,7 @@ describe("Shape", () => {
     describe("Text Color", () => {
         it("It should throw an error if the text color is not a color", () => {
             const shape = new Shape();
-            const result = shape.isColor("wahekwahe");
+            const result = shape.isColor("blue");
             expect(result).toEqual(false);
         })
     })
